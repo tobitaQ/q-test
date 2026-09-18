@@ -9,9 +9,8 @@
 
 **動かなくても構いません。** 止まった場所とエラーが分かれば、それが README の不備の発見として同じ価値を持ちます。
 
-人を対象にした実験ではありません。個人情報は取りません。報告に入るのは OS 名・Python・ライブラリのバージョンと、
-テスト・図・表の結果、所要時間だけです（ホスト名・ユーザ名・パスは含めない作りにしてあります。送る前に `report.txt` を見て、
-気になるものがあれば消してください）。論文には論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
+人を対象にした実験ではありません。環境の情報は自動では採りません——下の報告フォームで**ご自身が選んで書いたもの**
+（OS の種別・Python の版）と、コマンドの結果行だけを受け取ります。論文には論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
 
 ## やり方 A：ブラウザだけ（Google アカウントが要る・おすすめ）
 
@@ -34,23 +33,27 @@ python -m notebooks.generate_tqe_figures         # 約 30 秒
 cd papers && python check_tables.py && cd ..     # 数秒
 ```
 
-報告をまとめて作る（bash。PowerShell の人は各コマンドの最後の数行を手でコピー）：
+結果だけをまとめる（bash。PowerShell の人は各コマンドの最後の数行を手でコピー）：
 
 ```bash
-{ uname -srm; python --version; git log --oneline -1
+{ git log --oneline -1; python --version
   pip freeze | grep -iE "^(pennylane|numpy|pandas|matplotlib|scipy)=="
   python -m pytest -q 2>&1 | tail -1
   ( cd papers && python check_tables.py 2>&1 | tail -4 )
-  sha256sum notebooks/figures/*.pdf 2>/dev/null || shasum -a 256 notebooks/figures/*.pdf
 } > report.txt; cat report.txt
 ```
 
-## 送ってほしいもの
+## 報告フォーム（コピーして埋めて送る）
 
-- `report.txt` の中身（A なら最後のセルの出力）
-- 開始から終了までのおおよその時間
-- 途中で止まった場合：どのコマンドで、エラーの最後の 20 行くらい
-- 一言：README で分かりにくかった所（あれば）
+```
+環境      ：[ ] Colab   [ ] Windows   [ ] Mac（Intel / Apple Silicon）   [ ] Linux   ← 1 つ選ぶ
+Python    ：3.__（`python --version` の値）
+所要時間  ：約 __ 分
+結果      ：（report.txt の中身、または各コマンドの最後の数行をここに貼る）
+
+止まった場合：どのコマンドで、エラーの最後の 20 行くらい
+一言       ：README で分かりにくかった所（任意）
+```
 
 送り先：依頼した本人（メール・チャットどちらでも）。
 
