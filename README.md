@@ -43,6 +43,17 @@ cd papers && python check_tables.py && cd ..     # 数秒
 } > report.txt; cat report.txt
 ```
 
+### 終わったら（やり方 B の後片付け）
+
+作ったものは `qaoa-portfolio-penalty-benchmark` フォルダ 1 つだけです（仮想環境 `.venv` もその中）。フォルダごと消せば元に戻ります。
+
+```bash
+deactivate                                   # 仮想環境を抜ける（有効にしていた場合）
+cd .. && rm -rf qaoa-portfolio-penalty-benchmark   # Windows PowerShell: Remove-Item -Recurse -Force qaoa-portfolio-penalty-benchmark
+```
+
+PC 全体には何も入れていません（pip のパッケージは `.venv` の中だけ）。
+
 ## 報告フォーム（コピーして埋めて送る）
 
 ```
