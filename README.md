@@ -9,8 +9,9 @@
 
 **動かなくても構いません。** 止まった場所とエラーが分かれば、それが README の不備の発見として同じ価値を持ちます。
 
-人を対象にした実験ではありません。個人情報は取りません。報告に入るのは OS・Python・ライブラリのバージョンと、
-テスト・図・表の結果、所要時間だけで、論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
+人を対象にした実験ではありません。個人情報は取りません。報告に入るのは OS 名・Python・ライブラリのバージョンと、
+テスト・図・表の結果、所要時間だけです（ホスト名・ユーザ名・パスは含めない作りにしてあります。送る前に `report.txt` を見て、
+気になるものがあれば消してください）。論文には論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
 
 ## やり方 A：ブラウザだけ（Google アカウントが要る・おすすめ）
 
@@ -36,7 +37,7 @@ cd papers && python check_tables.py && cd ..     # 数秒
 報告をまとめて作る（bash。PowerShell の人は各コマンドの最後の数行を手でコピー）：
 
 ```bash
-{ uname -a; python --version; git log --oneline -1
+{ uname -srm; python --version; git log --oneline -1
   pip freeze | grep -iE "^(pennylane|numpy|pandas|matplotlib|scipy)=="
   python -m pytest -q 2>&1 | tail -1
   ( cd papers && python check_tables.py 2>&1 | tail -4 )
