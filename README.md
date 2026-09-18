@@ -5,7 +5,7 @@
 論文「Measuring Metric and Sampling Distortions in Penalty-Encoded QAOA Portfolio Benchmarks」（IEEE TQE 投稿中）の
 公開パッケージが、**著者と無関係の環境で README どおりに動くか**を確かめるテストです。
 量子計算・GPU・クラウドは使いません。あなたの環境で「コミット済みの結果ファイルから論文の図と表を作り直し、
-原稿の全表 2,228 セルと一致するか」を機械的に確認するだけです（これを「水準 1 の再現」と呼んでいます）。
+原稿の全表 2,578 セルと一致するか」を機械的に確認するだけです（これを「水準 1 の再現」と呼んでいます）。
 
 **動かなくても構いません。** 止まった場所とエラーが分かれば、それが README の不備の発見として同じ価値を持ちます。
 
@@ -37,7 +37,7 @@ cd papers && python check_tables.py && cd ..     # 数秒
 
 ```bash
 { git log --oneline -1; python --version
-  pip freeze | grep -iE "^(pennylane|numpy|pandas|matplotlib|scipy)=="
+  pip freeze | grep -iE "^(pennylane|pennylane[-_]lightning|numpy|pandas|matplotlib|scipy)=="
   python -m pytest -q 2>&1 | tail -1
   ( cd papers && python check_tables.py 2>&1 | tail -4 )
 } > report.txt; cat report.txt
