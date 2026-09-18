@@ -1,8 +1,10 @@
-# 再現テストのお願い（5〜10 分）
+# 再現手順
+
+所要時間：5〜10 分
 
 ## これは何か
 
-論文「Measuring Metric and Sampling Distortions in Penalty-Encoded QAOA Portfolio Benchmarks」（IEEE TQE 投稿中）の
+論文「Measuring Metric and Sampling Distortions in Penalty-Encoded QAOA Portfolio Benchmarks」の
 公開パッケージが、**著者と無関係の環境で README どおりに動くか**を確かめるテストです。
 量子計算・GPU・クラウドは使いません。あなたの環境で「コミット済みの結果ファイルから論文の図と表を作り直し、
 原稿の全表 2,578 セルと一致するか」を機械的に確認するだけです（これを「水準 1 の再現」と呼んでいます）。
@@ -10,7 +12,7 @@
 **動かなくても構いません。** 止まった場所とエラーが分かれば、それも結果として受け取ります。
 
 人を対象にした実験ではありません。環境の情報は自動では採りません——下の報告フォームで**ご自身が選んで書いたもの**
-（OS の種別・Python の版）と、コマンドの結果行だけを受け取ります。論文には論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
+（OS の種別・Python の版）と、コマンドの結果行だけを受け取ります。論文には「Windows 11／Python 3.12 の環境で 7 分で完了」のように匿名で載ります。
 
 ## やり方 A：ブラウザだけ（Google アカウントが要る）
 
