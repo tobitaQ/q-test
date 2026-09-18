@@ -18,7 +18,7 @@
 2. 上から順にセル左の ▶ を押す（4 つ。1 つ目が 2〜3 分、あとは 1〜2 分ずつ）
 3. **最後のセルの出力を全部コピーして送る**（`report.txt` の中身が表示されます）
 
-## やり方 B：自分の PC（Windows／Mac／Linux のどれか。OS が違うほど価値があります）
+## やり方 B：自分の PC（Windows／Mac／Linux）
 
 用意：Python 3.11 以上・git。Windows は WSL か Git Bash 推奨（PowerShell でも 1 行ずつなら可）。
 
