@@ -14,7 +14,7 @@
 
 ## やり方 A：ブラウザだけ（Google アカウントが要る・おすすめ）
 
-1. 開く → **[Colab で開く](https://colab.research.google.com/github/tobitaQ/qaoa-benchmark-reproduction/blob/main/notebooks/reproduce_level1.ipynb)**
+1. 開く → **[Colab で開く](https://colab.research.google.com/github/tobitaQ/q-test/blob/main/notebooks/reproduce_level1.ipynb)**
 2. 上から順にセル左の ▶ を押す（4 つ。1 つ目が 2〜3 分、あとは 1〜2 分ずつ）
 3. **最後のセルの出力を全部コピーして送る**（`report.txt` の中身が表示されます）
 
