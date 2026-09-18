@@ -1,6 +1,6 @@
 所要時間：5〜10 分
 
-## これは何か
+## 概要
 
 論文「Measuring Metric and Sampling Distortions in Penalty-Encoded QAOA Portfolio Benchmarks」の
 公開パッケージが、**著者と無関係の環境で README どおりに動くか**を確かめるテストです。
